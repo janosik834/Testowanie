@@ -1,24 +1,79 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 60px;
+}
+.head.button {
+  /* backface-visibility: hidden; */
+  background-color: rgba(255, 0, 0, 0.0);
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 0.2;
+
+
+
 }
 
+Dropdown {
+  background-color: rgba(0,0,0,0);
+}
+header {
+  background-image:url("./image/sand_2.jpg");
+  align-items: center;
+text-align:center;}
+/* .mr-2 { margin-right: 0.5em; align-items: center;} */
+.ig-1 {display:flex; flex-direction:row; align-items:center;}
+/* .mb-3 {display:flex; flex-direction:row;} */
+.header.item { flex-direction:row; margin-top: 2ex; text-align: center;}
+.header.button {flex-direction:row;  text-align: center;}
+
+#bg-nested-dropdown {
+  display:flex; flex-direction:row; background-color: rgba(255, 0, 0, 0.0);
+border-color: rgba(0,0,0,0.2)}
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
+.ui.container {
+  align-items: center;
+  center
+  display:flex; flex-direction:row;
+}
 
 .App-intro {
   font-size: large;
+}
+a {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+ a.header.item {
+  text-align: center;
+}
+
+.ui.menu img.logo {
+  margin-right: 1.5em;
+  width: 130px;
+  height: 130px;
+
+}
+.ui.list {
+    margin-top: 5em;
+  text-align: center;
+}
+
+.ui.main.text.container {
+    margin-top: 5em;
+    center
+      display:flex;
+       flex-direction:row;
 }

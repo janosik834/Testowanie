@@ -2,4 +2,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("./image/sand_2.jpg");
+}
+App {
+
+}
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}
+
+.main.container {
+    margin-top: 5em;
+}
+
+ul.ui.list li:before {
+  display: none;
+  background-color: tomato;
+  content: '';
 }
