@@ -1,0 +1,51 @@
+
+.head.button {
+  /* backface-visibility: hidden; */
+  background-color: rgba(255, 0, 0, 0.0);
+  border-color: rgba(0,0,0,0.2);
+  /* border-radius: 0.2; */
+
+}
+
+.ui.container {
+  align-items: center;
+  center
+  display:flex; flex-direction:row;
+}
+.ui.menu {
+  align-items: center;
+
+}
+.header.row {
+  align-items:center;  display:flex;
+}
+h1 {text-align: center;
+display: flex;}
+
+.header.item {
+  text-align: center;
+}
+.App-logo {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  animation: App-logo-spin infinite 20s linear;
+  height: 90px;
+}
+/* header {
+  background-image:url("./image/sand_2.jpg");
+  align-items: center;
+text-align:center;}
+ */
+
+#bg-nested-dropdown {
+
+ background-color: rgba(255, 0, 0, 0.0);
+  column-rule-color: rgba(255,0,0,0);
+border-color: rgba(0,0,0,0.2);
+
+}
+
+/* .header.item { flex-direction:row; margin-top: 2ex; text-align: center;} */
+/* .header.button {flex-direction:row;  text-align: center;} */
