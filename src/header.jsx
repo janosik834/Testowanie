@@ -13,7 +13,7 @@ export default class HeaderTag extends React.Component {
 render(){
 return (
    <header className="ui menu" >
-    <Container className="ui container" fluid={true} center>
+    <Container className="ui container" fluid={true} >
     <Row className="header row">
     <Col sm={2}>
 
