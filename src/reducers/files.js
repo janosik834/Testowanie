@@ -7,3 +7,13 @@ export const files = (state = [], action) => { // (1)
       return state
   }
 }
+
+
+export const filesSearch = (state = '', action) => {
+  switch (action.type) {
+    case 'SEARCH_FILES':
+      return action.text;
+    default:
+      return state
+  }
+}

@@ -6,13 +6,11 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import file_icon from './image/fileIcon.png'
 export default  class WordCard extends React.Component {
   constructor(props){
-  console.log("dsdfdsfdsddddd",props.files);
-
     super(props);
-      // console.log("dsdfdsfdsddddd",props.files);
     this.state = {nameWord : props.name,
                   filesInWord: props.files};
   }
+
   onClickHandler = () => {
 const inputComponent =  document.getElementById("text_input_main" )
 this.setState({nameWord:inputComponent.value});
@@ -24,7 +22,6 @@ componentWillReceiveProps(nextProps){
 
 }
 render() {
-console.log(this.state)
   return (
   <Card className="word card" key='card1'  >
   <Card.Title className="card center"  as="button">{this.state.nameWord}</Card.Title>

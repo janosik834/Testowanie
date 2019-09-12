@@ -4,6 +4,8 @@ import React from 'react';
 // import logo_src from './image/LogoMakr.png'
 // import file_icon from './image/fileIcon.png'
 import './App.css';
+// import ContactsFilter from './contactsfilter.jsx'
+import FilesFilterContainer from './filesfilter.jsx'
 // import Button from 'react-bootstrap/Button';
 // import ButtonGroup from 'react-bootstrap/ButtonGroup';
 // import ToggleButton from 'react-bootstrap/ToggleButton';
@@ -14,8 +16,9 @@ import HeaderTag from './header.jsx'
 // import Card from 'react-bootstrap/Card'
 // import ListGroup from 'react-bootstrap/ListGroup'
 // import ReactDOM from 'react-dom'
-import WordCard from './File_card.jsx'
-import  {filesFetched} from './actions'
+import WordCard from './File_card.jsx';
+import  {filesFetched} from './actions';
+import {getFilteredFiles} from './selectors/getFilteredFiles';
 import { connect } from 'react-redux'
 
 // function onClickHandler(){
@@ -30,41 +33,6 @@ import { connect } from 'react-redux'
 
 
 // const title_value = "start"
-function ContactsList() {
-  return (
-
-    <ul className="ui relaxed divided list selection">
-      <ContactItem
-        login="typeofweb1"
-        name="Lena"
-        department="JavaScript Developer"
-      />
-      <ContactItem
-        login="typeofweb2"
-        name="Brian"
-        department="Human Resources"
-      />
-      <ContactItem
-        login="typeofweb3"
-        name="Rick"
-        department="QA"
-      />
-    </ul>
-  );
-}
-
-function ContactItem({ login, name, department }) {
-  const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
-  return (
-    <li className="item">
-      <img src={imgUrl} className="ui mini rounded image" alt="avatar"/>
-      <div className="content">
-        <h4 className="header">{name}</h4>
-        <div className="description">{department}</div>
-      </div>
-    </li>
-  );
-}
 
 function LookingBar () {
 
@@ -148,10 +116,14 @@ render() {
   return (
     <div >
       <HeaderTag className="head"/>
+
       <main className="ui main text container">
+
       <LookingBar />
+
+      <FilesFilterContainer className="center" />
       {filesss ? <WordCard name={namecards} files={filesss} id="card_renderr" key='wwordcard'/> : 'Ładowanie ...'}
-        <ContactsList />
+    
       </main>
     </div>
   );
@@ -160,7 +132,7 @@ render() {
 
 const mapStateToProps = (state) => {
   return {
-    files: state.files
+    files: getFilteredFiles(state.files, state.filesSearch)
   }
 };
 const mapDispatchToProps = { filesFetched };
